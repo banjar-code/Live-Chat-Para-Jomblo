@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Assistant</title>
+        <title>Live Chat Para Jomblo</title>
         <meta charset="UTF-8" />
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
         <style>
@@ -120,59 +120,61 @@ button
         </style>
         
         <script>
-            const ThingsICanDo = [
-    "What's your name ?",
-    "What's my name ?",
-    "What's the time ?",
-    "What date is today?",
-    "Hello Anisa",
-    "Anisa where are you?",
-    "How are you ?",
-    "5+10",
-    "lol",
-    "best programming language",
-    "Good Night",
-    "Good Morning",
-    "Good Afternoon",
-    "happy diwali",
-    "do you like sololearn",
-    "i love you",
-    "open facebook"
-    
-];
 
 const Random = list => list[Math.floor(Math.random()*list.length)]; 
-
-const WhatCanIDo = ThingsICanDo => Random(ThingsICanDo); 
-
-
+ 
 const Links = {
     "facebook" : "https://www.facebook.com",
     "google" : "https://www.google.com",
-    "twitter" : "https://www.twitter.com"
+    "twitter" : "https://www.twitter.com",
+    "panduancode" : "https://www.panduancode.com"
 };
 
-const getLink = siteName => `Click here to open <a href="${Links[siteName]}">${siteName}</a>`;
+const getLink = siteName => `klik disini untuk membuka panduancode <a href="${Links[siteName]}">${siteName}</a>`;
 
 
 
-const Jokes = [
+const pertanyaan = [
     
-    `A: I have the perfect son.<br/>
-B: Does he smoke? <br/>
-A: No, he doesn't. <br/>
-B: Does he drink whiskey? <br/> 
-A: No, he doesn't. <br/>
-B: Does he ever come home late? <br/> 
-A: No, he doesn't. <br/>
-B: I guess you really do have the perfect son. How old is he?<br/> 
-A: He will be six months old next Wednesday.<br/>`,
-`Patient: Doctor! You've got to help me! Nobody ever listens to me. No one ever pays any attention to what I have to say.<br/>
-Doctor: Next please! `
+    `Gunakan pertanyaan yang mengandung kata kunci, contoh kata kunci (pembuat mu) dan pertanyaan yang dapat di ajukan adalah (siapa pembuat mu Anisa?) dan lain-lain.<br/>
+Daftar kata kunci yang dapat di pakai:<br/>
+1.Siapa pembuat mu<br/>
+2.umur kamu berapa<br/>
+3.apakabar<br/>
+4.hi<br/>
+5.kamu sedang apa<br/>
+6.siapa saya<br/>
+7.stmj pangkat 3<br/>
+8.nama mu<br/>
+9.ulang tahun mu<br/>
+10.tanggal<br/>
+11.jam<br/>
+12.kamu mau hadiah apa<br/>
+13.makan kesukaan mu<br/>
+14.minuman kesukaan mu<br/>
+15.sudah makan<br/>
+16.selamat malam<br/>
+17.selamat pagi<br/>
+18.selamat siang<br/>
+19.selamat sore<br/>
+20.dimana kamu<br/>
+21.aku boleh kesana<br/>
+22.i love you<br/>
+23.aku suka kamu<br/>
+24.kamu sedang dimana<br/>
+25.lol<br/>
+26.cepet mandi<br/>
+27.aku jemput<br/>
+28.berangkat<br/>
+29.panduancode<br/>
+30.facebook<br/>
+31.google<br/>
+32.twitter<br/>
+33.sampai jumpa<br/>`
 
 ];
 
-const TellAJoke = Jokes => Random(Jokes);
+const ini_adalah_daftar_pertanyaan_yang_dapat_Anda_gunakan = pertanyaan => Random(pertanyaan);
 
 
 const Message = () => alert("If you want to suggest new jokes or questions and answer, feel free to comment. ");
@@ -223,18 +225,18 @@ HtmlSpecialChars.specialchars = [
 ];
 
 const monthNames = [
-    "January",
-    "February",
-    "March", 
+    "Januari",
+    "Februari",
+    "Maret", 
     "April", 
-    "May", 
-    "June", 
-    "July", 
-    "August", 
+    "Mei", 
+    "Juni", 
+    "Juli", 
+    "Agustus", 
     "September", 
-    "October",
+    "Oktober",
     "November", 
-    "December"
+    "Desember"
  ]; 
 
 
@@ -279,41 +281,46 @@ const Evaluate = expression =>
 }
 
 const Answers = {
-    "joke" : TellAJoke(Jokes),
-    "what you can do" : `Try saying '${ WhatCanIDo(ThingsICanDo)}'`,
-    "who is your creator" : "My creator is Arif Noerwahidin 😃",
-    "meaning of life" : "The meaning of life is 42.",
-    "hello" : "Hello %U% 😃. How can I help ? ",
+    "pertanyaan" : ini_adalah_daftar_pertanyaan_yang_dapat_Anda_gunakan(pertanyaan),
+      "pembuat mu" : "Saya dibuat oleh panduancode 😃",
+    "umur kamu berapa" : "sekarang umur saya 18 tahun.",
+    "apakabar" : "aku baik-baik saja %U% 😃. kalau kamu bagaimana ? ",
     "hi" : "Hi %U% 😁",
-    "hola" : "Hola amigo 😁",
-    "my name" : "Your name is %U% &#10024;",
-    "your name" : "My name is Anisa &#10024;",
-    "Anisa" : "I'm here for you %U%",
-    "date" : "Its "+ today(monthNames) + " today. Make this day a great one %U% 😀",
-    "time" : "The time is " + now() + " in your region.",
+    "kamu sedang apa" : "sedang chattan sama kamu 😂",
+    "siapa saya" : "kamu adalah %U% &#10024; sebagai penyandang gelar STMJ Pangkat 3 😂",
+    "stmj pangkat 3" : "STMJ Pangkat 3 ( Semester 6 Masih Jomblo, Semester 7 Masih Jomblo, Sampai Tamat Masih Jomblo, Dan Pada Akhirnya Loe Sadar Betapa Indahnya Merasakan Cinta 😂😂😂",
+    "nama mu" : "Nama saya Anisa &#10024;",
+    "ulang tahun mu" : "ulang tahun ku tanggal 8 April 2002, emangnya kenapa nanya kapan ulang tahun ku? mau ngasih hadiah?",
+    "tanggal" : "sekarang "+ today(monthNames) + " %U% 😀",
+    "jam" : "sekarang jam " + now() + " %U% 😀",
     
     
-    "happy diwali" : "Happy Diwali to you too %U% 😃",
-    "who is better google assistant or siri" : "No virtual assistant is better than me 😎",
-    "best programming language" : "the one that lacks curly braces 🐍",
-    "bye" : "Good bye. Hope we meet soon 😀",
-    "good night" : "Good Night %U% 🌃",
-    "good morning" : "Good Morning %U% 🌅",
-    "good afternoon" : "Good Afternoon %U% ☀",
-    "good evening" : "Good Evening %U% 🌇",
-    "how are you" : "I am great !!! %U%. 😃",
-    "you are cool" : "Thanks, I was born this way 😉",
+    "kamu mau hadiah apa" : "Ehh gak usah aku bercanda kok tapi ya kalau mau ngasih hadiah aku mau kamu pergi dari hidup ku bisa? %U% 😂",
+    "makanan kesukaan mu" : "Danging panggang mantan 😎",
+    "minuman kesukaan mu" : "air mata mantan buah naga 😂",
+    "sudah makan" : "belum.",
+    "selamat malam" : "selamat malam juga %U%",
+    "selamat pagi" : "selamat pagi juga %U%",
+    "selamat siang" : "selamat siang juga %U%",
+    "selamat sore" : "selamat sore juga %U%",
+    "dimana kamu" : "saya sedang di Taman dekat Air mancur 7 rupa %U%. 😃",
+    "aku boleh kesana" : "gak boleh, aku mau sendiri.",
     "i love you" : "I Love you too %U% 😊",
-    "awesome" : "Glad, you liked it 😊",
-    "do you like sololearn" : "Yes, Sololearn is fun. Infact, Sololearn is my birthplace 😃",  
+    "aku suka kamu" : "hmm aku juga suka kamu kok 😊",
+    "kamu sedang dimana" : "saya sedang di rumah",  
 "lol" : "Haha.. That was funny 😂",
+"cepet mandi" : "mau apa?",
+"aku jemput" : "iya deh aku tunggu sekarang",
+"berangkat" : "jangan telat ya",
+"sampai jumpa" : "sampai jumpa kembali %u%",
+"panduancode" : getLink("panduancode"),
 "facebook" : getLink("facebook"),
 "google" : getLink("google"),
 "twitter" : getLink("twitter")
 };
 
  
-const Notfound = "Sorry, I have no answers for that.";
+const Notfound = "saya tidak mengenali pertanyaan Anda, coba gunakan pertanyaan yang telah di sediakan!";
 
 const Invalid = "Invalid Expression";
 
